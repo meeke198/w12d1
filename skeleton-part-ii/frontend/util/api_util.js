@@ -12,8 +12,8 @@ export const fetchSinglePokemon = (pokeId) => {
   })
 }
 
-export const fetchAllItems = () => {
-  return $.ajax({
+// export const fetchAllItems = () => {
+//   return $.ajax({
     
-  })
-}
+//   })
+// }
