@@ -385,6 +385,7 @@ document.addEventListener("DOMContentLoaded", function () {
   react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_root__WEBPACK_IMPORTED_MODULE_3__["default"], {
     store: store
   }), rootEl);
+  window.store = store;
 });
 
 /***/ }),
@@ -510,13 +511,14 @@ var configureStore = function configureStore() {
 /*!***********************************!*\
   !*** ./frontend/util/api_util.js ***!
   \***********************************/
-/*! exports provided: fetchAllPokemon, fetchSinglePokemon */
+/*! exports provided: fetchAllPokemon, fetchSinglePokemon, fetchAllItems */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchAllPokemon", function() { return fetchAllPokemon; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchSinglePokemon", function() { return fetchSinglePokemon; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchAllItems", function() { return fetchAllItems; });
 var fetchAllPokemon = function fetchAllPokemon() {
   return $.ajax({
     method: "GET",
@@ -528,6 +530,9 @@ var fetchSinglePokemon = function fetchSinglePokemon(pokeId) {
     method: 'GET',
     url: "/api/pokemon/".concat(pokeId)
   });
+};
+var fetchAllItems = function fetchAllItems() {
+  return $.ajax({});
 };
 
 /***/ }),
